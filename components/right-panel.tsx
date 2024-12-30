@@ -44,7 +44,7 @@ const RightPanel = () => {
                 return (
                     <GridItem key={item.title + item.type + index} size={item.layout}>
                         {item.type === "social" ? (
-                            <Social item={item} />
+                            <Social item={item} />                            
                         ) : item.type === "mentor" ? (
                             <Mentor item={item} />
                         ) : item.type === "project" ? (

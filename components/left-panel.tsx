@@ -47,9 +47,7 @@ const LeftPanel = () => {
                         }}
                     /> */}
 
-                    <p className="w-11/12 text-sm font-light text-neutral-500">
-                        Find all of my useful Links and Get to know more about my projects & experience.
-                    </p>
+                    
                 </div>
                 {/* Buttons Container */}
                 <div className="flex items-center gap-3 mt-6 ">
@@ -65,7 +63,7 @@ const LeftPanel = () => {
                         className="flex items-center w-full  gap-2 px-4 py-2 text-sm font-medium border rounded-md border-neutral-100 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-800"
                     >
                         <Mail size="14" />
-                        Contact Me
+                        Mail Me
                     </a>
                 </div>
 

@@ -34,13 +34,13 @@ const GridItems: GridItemInterface[] = [
         type: "social",
         title: "LinkedIn",
         icon: "linkedin",
-        username: "michel-fawaz",
+        username: "Devansh Vishwa",
         description:
             "Connect with me on LinkedIn to explore my professional journey and stay updated on my latest achievements and projects showcased in my portfolio website.",
         color: "#0077b5",
-        buttonTitle: "Connect With me!",
-        buttonLink: "https://www.linkedin.com/in/michel-fawaz/",
-        // buttonSecondaryText: "1.1K",
+        buttonTitle: "Connect with me !",
+        buttonLink: "https://www.linkedin.com/in/devansh-vishwa-1baa34212/",
+        buttonSecondaryText: "150+",
     },
     //   {
     //     layout: "1x2",
@@ -58,345 +58,88 @@ const GridItems: GridItemInterface[] = [
         type: "social",
         title: "Github",
         icon: "github",
-        username: "@michelfawazz",
+        username: "@dev129",
         buttonTitle: "Follow Me!",
-        buttonSecondaryText: "",
-        buttonLink: "https://github.com/michelfawazz",
+        buttonSecondaryText: "48+ PRs",
+        buttonLink: "https://github.com/dev129",
         color: "#070707",
         description:
-            "Click on me to view my open-source projects!",
+            "Click to view my open-source projects!",
     },
     {
         layout: "1x2",
         type: "social",
-        title: "Twitter",
-        icon: "twitter",
-        username: "@michelNfawaz",
+        title: "Instagram",
+        icon: "instagram",
+        username: "@devanshvishwa",
         buttonTitle: "Follow",
-        buttonLink: "https://twitter.com/michelnfawaz",
+        buttonLink: "https://www.instagram.com/devanshvishwa/",
         buttonSecondaryText: "193",
-        color: "#1DA1F2",
+        color: "#bc2a8d",
         description:
-            "Software Engineer building in Public!",
+            "Chill Developer !",
     },
     {
         layout: "1x2",
         type: "social",
         title: "Resume",
-        icon: "resume",
         username: "",
+        icon: "resume",
         buttonTitle: "Download",
         buttonLink: "https://utfs.io/f/f3db2131-47fe-47f2-a80b-6fa0bbea97a9-8a3mok.pdf",
         buttonSecondaryText: "",
         color: "#070707",
         description:
-            "Download My resume!",
+            "Download my resume!",
     },
 
     {
         layout: "2x2",
         type: "social",
-        title: "Calendly",
-        icon: "calendly",
+        title: "Skills & Achievements",
+        icon: "trophy",
         username: "",
         description:
-            "Book a 30 min Call with me",
+            "Hall of Fame",
         color: "#070707",
-        buttonTitle: "Schedule",
+        buttonTitle: "Know More",
         buttonLink: "https://calendly.com/michelfawaz/30min",
+        
         // buttonSecondaryText: "1.1K",
     },
     {
         layout: "2x1",
         type: "project",
-        title: "Sign in with Ethereum",
+        title: "College Campus Creator Hackathon",
         icon: "github",
         color: "#070707",
-        buttonLink: "https://github.com/michelfawazz/SIWE-NextJs-Nestjs",
-        stars: 1,
+        buttonLink: "https://github.com/dev129/College-Campus-Creators-2024",
+        // stars: 1,
     },
     {
         layout: "2x1",
         type: "project",
-        title: "NestJS JWT Auth template",
+        title: "Park Mate",
         icon: "github",
         color: "#070707",
         stars: 2,
 
-        buttonLink: "https://github.com/michelfawazz/NestJS-Jwt-AUTH-arangodb",
+        buttonLink: "https://github.com/dev129/ParkMate",
     },
-    // {
-    //     layout: "2x1",
-    //     type: "mentor",
-    //     title: "Supabase Mentorship",
-    //     icon: "superpeer",
-    //     promotion: "MAKRDEVFELLOWS",
-    //     oldPrice: "$100",
-    //     price: "$50",
-    //     buttonLink: "https://superpeer.com/makrdev/-/supabase-mentor",
-    // },
-    
-    // {
-    //     layout: "2x2",
-    //     type: "social",
-    //     title: "Restaurant Web3 Membership System NFT ",
-    //     username: "Le Vesuvio",
-    //     description:
-    //         "NFT collection and membership website made for Le Vesuvio restaurant.",
-    //     icon: "next",
-    //     buttonTitle: "View Project",
-    //     buttonSecondaryText: "",
-    //     buttonLink:
-    //         "https://vesuv.io/",
-    // },
-    // {
-    //     layout: "2x1",
-    //     type: "project",
-    //     title: "AI Blog Post Generator",
-    //     icon: "github",
-    //     stars: 19,
-    //     color: "#070707",
-    //     buttonLink: "https://github.com/batuhanbilginn/ai-blog-post-generator",
-    // }
-    // ,{
-    //     layout: "2x2",
-    //     type: "social",
-    //     title: "AktionT4 NFT Collection & Backend",
-    //     username: "",
-    //     description:
-    //         "Aktion T4 Blockchain and Backend Development",
-    //     icon: "ethereum",
-    //     buttonTitle: "View Project",
-    //     buttonSecondaryText: "",
-    //     buttonLink:
-    //         "https://aktionT4.com",
-    // },
-    // },
-    // {
-    //     layout: "2x4",
-    //     type: "experience",
-    //     title: "Professional Experience",
-        
- 
 ];
 
-const GridItemsLower: GridItemInterface[] = [
-    // {
-    //     layout: "2x2",
-    //     type: "social",
-    //     title: "LinkedIn",
-    //     icon: "linkedin",
-    //     username: "michel-fawaz",
-    //     description:
-    //         "Connect with me on LinkedIn to explore my professional journey and stay updated on my latest achievements and projects showcased in my portfolio website.",
-    //     color: "#0077b5",
-    //     buttonTitle: "Connect",
-    //     buttonLink: "https://www.linkedin.com/in/michel-fawaz/",
-    //     // buttonSecondaryText: "1.1K",
-    // },
-    //   {
-    //     layout: "1x2",
-    //     type: "social",
-    //     title: "Discord",
-    //     icon: "discord",
-    //     username: "@makrdev",
-    //     buttonTitle: "Join",
-    //     buttonLink: "https://discord.com/invite/5aXRp49Q4h",
-    //     buttonSecondaryText: "44",
-    //     color: "#5865F2",
-    //   },
-    // {
-    //     layout: "2x2",
-    //     type: "social",
-    //     title: "Github",
-    //     icon: "github",
-    //     username: "@michelfawazz",
-    //     buttonTitle: "Follow",
-    //     buttonSecondaryText: "",
-    //     buttonLink: "https://github.com/michelfawazz",
-    //     color: "#070707",
-    //     description:
-    //         "Click on me to view my open-source projects!",
-    // },
-    // {
-    //     layout: "1x2",
-    //     type: "social",
-    //     title: "Twitter",
-    //     icon: "twitter",
-    //     username: "@michelNfawaz",
-    //     buttonTitle: "Follow",
-    //     buttonLink: "https://twitter.com/michelnfawaz",
-    //     buttonSecondaryText: "193",
-    //     color: "#1DA1F2",
-    //     description:
-    //         "Software Engineer building in Public!",
-    // },
-    // {
-    //     layout: "1x2",
-    //     type: "social",
-    //     title: "Resume",
-    //     icon: "resume",
-    //     username: "",
-    //     buttonTitle: "Download",
-    //     buttonLink: "https://utfs.io/f/f3db2131-47fe-47f2-a80b-6fa0bbea97a9-8a3mok.pdf",
-    //     buttonSecondaryText: "",
-    //     color: "#070707",
-    //     description:
-    //         "Download My resume!",
-    // },
-    // {
-    //     layout: "2x1",
-    //     type: "project",
-    //     title: "Sign in with Ethereum",
-    //     icon: "github",
-    //     color: "#070707",
-    //     buttonLink: "https://github.com/michelfawazz/SIWE-NextJs-Nestjs",
-    //     stars: 1,
-    // },
-    // {
-    //     layout: "2x1",
-    //     type: "mentor",
-    //     title: "Next.js Mentorship",
-    //     icon: "superpeer",
-    //     promotion: "MAKRDEVFELLOWS",
-    //     oldPrice: "$100",
-    //     price: "$50",
-    //     buttonLink: "https://superpeer.com/makrdev/-/nextjs-mentor",
-    // },
-    // {
-    //     layout: "2x1",
-    //     type: "mentor",
-    //     title: "Supabase Mentorship",
-    //     icon: "superpeer",
-    //     promotion: "MAKRDEVFELLOWS",
-    //     oldPrice: "$100",
-    //     price: "$50",
-    //     buttonLink: "https://superpeer.com/makrdev/-/supabase-mentor",
-    // },
-
-    ,{
-        layout: "1x2",
-        type: "social",
-        title: "InfinityTools",
-        username: "",
-        description:
-            "A collection of AI tools",
-        icon: "next",
-        buttonTitle: "Coming Soon!",
-        buttonSecondaryText: "",
-        buttonLink:
-            "/",
-    },
-
-    
-    {
-        layout: "2x2",
-        type: "social",
-        title: "Restaurant Web3 Membership System NFT ",
-        username: "Le Vesuvio",
-        description:
-            "NFT collection and membership website made for Le Vesuvio restaurant.",
-        icon: "next",
-        buttonTitle: "View Project",
-        buttonSecondaryText: "",
-        buttonLink:
-            "https://vesuv.io/",
-    },
-    {
-        layout: "1x2",
-        type: "social",
-        title: "AI Agency",
-        username: "",
-        description:
-            "Generate Ai employees that you can Chat with!",
-        icon: "next",
-        buttonTitle: "Coming Soon!",
-        buttonSecondaryText: "",
-        buttonLink:
-            "/",
-    },
-    {
-        layout: "2x1",
-        type: "project",
-        title: "KnowledgeBase Chat AI Saas ",
-        icon: "github",
-        stars: 1,
-        color: "#070707",
-        buttonLink: "https://github.com/",
-    }
-    ,{
-        layout: "2x2",
-        type: "social",
-        title: "AktionT4 NFT Collection & Backend",
-        username: "",
-        description:
-            "Aktion T4 Blockchain and Backend Development",
-        icon: "ethereum",
-        buttonTitle: "View Project",
-        buttonSecondaryText: "",
-        buttonLink:
-            "https://aktionT4.com",
-    },
-    ,{
-        layout: "1x2",
-        type: "social",
-        title: "NFT GAME 1024",
-        username: "",
-        description:
-            "Smart Contract and Website development of 1024 Blockchain Game",
-        icon: "ethereum",
-        buttonTitle: "View Project",
-        buttonSecondaryText: "",
-        buttonLink:
-            "1024-landingpage-tan.vercel.app",
-    },
-    {
-        layout: "1x2",
-        type: "social",
-        title: "Priority Queue Management System",
-        username: "QueueUp",
-        description:
-            "Priority Queue management system built with django",
-        icon: "django",
-        buttonTitle: "View Project",
-        buttonSecondaryText: "",
-        buttonLink:
-            "https://github.com/michelfawazz/QueueUp",
-    },
-    {
-        layout: "2x1",
-        type: "project",
-        title: "Portfolio Website Source Code",
-        icon: "github",
-        stars: 1,
-        color: "#070707",
-        buttonLink: "https://github.com/michelfawazz/Portfolio-Bento-style",
-    }
-
-    // {
-    //     layout:"4x4",
-    //     type: "skills",
-    //     title: "Skills",
-    // }
-    // },
-    // {
-    //     layout: "2x4",
-    //     type: "experience",
-    //     title: "Professional Experience",
-        
- 
-];
+const GridItemsLower: GridItemInterface[] = [];
 
 
 
 export const siteConfig = {
-    creator: "Michel fawaz",
-    title: "Software Engineer",
-    bio: "Software Engineer | Full Stack, Generative AI, Blockchain | Architecting Scalable SaaS",
-    location: "United States",
+    creator: "Devansh Vishwa",
+    title: "Frontend developer",
+    bio: "Head , Debuggers Club ||Frontend Developer || 2x Hackathon Organiser || 48th rank in GSSoC-ext (2024) || NextJS || Open Source Contributor",
+    location: "Udaipur, Rajasthan",
     locationLink:
-        "",
-    email: "michelfawaz87@gmail.com",
+        "https://www.google.com/maps/place/Udaipur,+Rajasthan/@24.6084198,73.6224703,12z/data=!3m1!4b1!4m6!3m5!1s0x3967e56550a14411:0xdbd8c28455b868b0!8m2!3d24.585445!4d73.712479!16zL20vMGJfa2Z5?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
+    email: "devanshvishwa2004@gmail.com",
     items: GridItems,
     itemsLower: GridItemsLower,
 } as const;

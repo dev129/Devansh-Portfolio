@@ -1,14 +1,7 @@
 import Footer from "@/components/footer";
-import GridItem from "@/components/grid-item";
-import Equipments from "@/components/grid-items/equipments";
-import Experience from "@/components/grid-items/experience";
-import Mentor from "@/components/grid-items/mentor";
-import Project from "@/components/grid-items/project";
-import Social from "@/components/grid-items/social";
 import LeftPanel from "@/components/left-panel";
 import RightPanel from "@/components/right-panel";
-import { siteConfig } from "@/config/site-config";
-import MidPanel from "@/components/mid-panel";
+
 export default function Home() {
   return (
     <main className="relative flex flex-col items-center flex-1 w-full h-full">
@@ -24,28 +17,9 @@ export default function Home() {
         {/* Footer for Mobile */}
        
       </div>
-
-
-      <div className="container relative z-20 flex pb-6 mb-6">
-        <MidPanel />
-
-
-      </div>
-
-
-      
-
-
       <div className="container relative z-20 flex pb-6 ">
-
-
-      
           <Footer />
-        </div>
-
-     
-
- 
+      </div>
     </main>
   );
 }
