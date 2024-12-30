@@ -74,7 +74,7 @@ const GridItems: GridItemInterface[] = [
         username: "@devanshvishwa",
         buttonTitle: "Follow",
         buttonLink: "https://www.instagram.com/devanshvishwa/",
-        buttonSecondaryText: "193",
+        // buttonSecondaryText: "1",        
         color: "#bc2a8d",
         description:
             "Chill Developer !",

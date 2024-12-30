@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="text-xs text-neutral-500 flex items-center"> 
           Made with 
           <span className="ml-1"> 
-            <AiFillHeart />
+            <AiFillHeart color='red'/>
           </span>
         </div>
         <ThemeToggle />

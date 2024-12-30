@@ -67,6 +67,9 @@
 }
  
 @layer base {
+  html,body{
+    @apply h-full min-h-screen;
+  }
   body {
     @apply h-full antialiased dark:bg-neutral-950 dark:text-neutral-50;
   }

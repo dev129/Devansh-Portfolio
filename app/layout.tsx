@@ -19,10 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} h-full min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100`}>
         
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col h-full">{children}</div>
+          <div className="flex flex-col h-full min-h-screen">{children}</div>
         </ThemeProvider>
         
         </body>
