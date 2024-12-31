@@ -1,50 +1,133 @@
 'use client'
-import React from 'react'
-import Footer from '@/components/footer'
 
-const NotFound: React.FC = () => {
-  return (
-    <div className='flex flex-col min-h-screen'>
-      <div className='flex flex-col items-center justify-center text-center text-black flex-grow'>
-        <img 
-          src='https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=BlazerSweater&eyeType=Default&eyebrowType=UpDownNatural&mouthType=Sad&skinColor=Brown' 
-          alt='Not Found' 
-        />
-        <div className='text-4xl font-bold text-black dark:text-white mt-4'>Guess you came at the wrong page</div>
-        <div className='mt-4 flex space-x-4'>
-<button
-  className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold group"
-  type="button"
-  onClick={() => window.history.back()}
->
-  <div
-    className="bg-green-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1024 1024"
-      height="25px"
-      width="25px"
-    >
-      <path
-        d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
-        fill="#000000"
-      ></path>
-      <path
-        d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
-        fill="#000000"
-      ></path>
-    </svg>
-  </div>
-  <p className="translate-x-2">Go Back</p>
-</button>
-        </div>
-      </div>
-      <div className='mb-5'>
-        <Footer />
-      </div>
-    </div>
-  )
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import Footer from '@/components/footer';
+
+interface MousePosition {
+  x: number;
+  y: number;
 }
 
-export default NotFound
+interface EyePosition {
+  x: number;
+  y: number;
+}
+
+interface EyeProps {
+  position: EyePosition;
+}
+
+const Eye: React.FC<EyeProps> = ({ position }) => (
+  <div className="eye relative w-24 h-24 md:w-32 md:h-32 bg-[#BB0D01] dark:bg-yellow-500 rounded-full inline-block">
+    <div 
+      className="absolute w-12 h-12 md:w-16 md:h-16 bg-[#E2C9B7] dark:bg-blue-950 rounded-full"
+      style={{
+        top: '50%',
+        left: '50%',
+        transform: `translate(calc(-50% + ${position.x}px), calc(-50% + ${position.y}px))`
+      }}
+    >
+      <div className="w-6 h-6 md:w-8 md:h-8 bg-black rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+    </div>
+  </div>
+);
+
+const NotFound: React.FC = () => {
+  const router = useRouter();
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
+  const [eyePositions, setEyePositions] = useState<EyePosition[]>([
+    { x: 0, y: 0 },
+    { x: 0, y: 0 }
+  ]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent): void => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  useEffect(() => {
+    const calculateEyePosition = (eyeRect: DOMRect | undefined): EyePosition => {
+      if (!eyeRect) return { x: 0, y: 0 };
+
+      const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+      const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+
+      // Calculate angle between mouse and eye center
+      const angle = Math.atan2(mousePosition.y - eyeCenterY, mousePosition.x - eyeCenterX);
+
+      // Limit movement radius
+      const radius = 10;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+
+      return { x, y };
+    };
+
+    const eyes = document.querySelectorAll('.eye');
+    const newPositions = Array.from(eyes).map(eye => 
+      calculateEyePosition(eye.getBoundingClientRect())
+    );
+
+    setEyePositions(newPositions);
+  }, [mousePosition]);
+
+  const handleGoBack = (): void => {
+    router.back();
+  };
+
+  return (
+    <>
+      <div className="min-h-screen bg-gray-100 dark:bg-black flex flex-col items-center justify-between relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 bg-white dark:bg-black z-0" />
+        
+        <div className="text-center relative z-10 flex-grow flex flex-col items-center justify-center dark:text-white">
+          <h1 className="text-8xl md:text-9xl font-bold text-black dark:text-white tracking-wider mb-4 relative">
+            WH
+            <span className="inline-block relative mx-1">
+              <Eye position={eyePositions[0]} />
+            </span>
+            <span className="inline-block relative mx-1">
+              <Eye position={eyePositions[1]} />
+            </span>
+            PS!
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 dark:text-white">
+            Are you lost?
+          </p>
+
+          <div className="flex space-x-4">
+            <button
+              onClick={handleGoBack}
+              className="px-8 py-3 bg-gray-800 text-white rounded-full text-lg font-semibold
+              transform transition-all duration-200 hover:scale-105 hover:bg-gray-700
+              focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+            >
+              Go Back
+            </button>
+            <button
+              onClick={() => router.push('/')}
+              className="px-8 py-3 bg-gray-800 text-white rounded-full text-lg font-semibold
+              transform transition-all duration-200 hover:scale-105 hover:bg-gray-700
+              focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+            >
+              Go Home
+            </button>
+          </div>
+        </div>
+
+      <div className="container relative z-20 flex pb-6 ">
+          <Footer />
+      </div>
+      </div>
+    </>
+  );
+};
+
+export default NotFound;
