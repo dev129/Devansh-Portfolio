@@ -96,14 +96,14 @@ const GridItems: GridItemInterface[] = [
     {
         layout: "2x2",
         type: "social",
-        title: "Skills & Achievements",
+        title: "Hall of Fame",
         icon: "trophy",
         username: "",
         description:
             "Hall of Fame",
         color: "#070707",
         buttonTitle: "Know More",
-        buttonLink: "https://calendly.com/michelfawaz/30min",
+        buttonLink: "/pages/halloffame",
         
         // buttonSecondaryText: "1.1K",
     },
