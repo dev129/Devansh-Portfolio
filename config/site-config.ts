@@ -100,7 +100,7 @@ const GridItems: GridItemInterface[] = [
         icon: "trophy",
         username: "",
         description:
-            "Hall of Fame",
+            "Skills & Achievements",
         color: "#070707",
         buttonTitle: "Know More",
         buttonLink: "/pages/halloffame",
