@@ -6,11 +6,17 @@ import Footer from '@/components/footer';
 const Page: React.FC = () => {
   return (
     <>
-      <section className="min-h-screen bg-red-500 grid place-items-center relative" id='section1'>
-        <div className='absolute flex items-center justify-center flex-col top-1/2 transform -translate-y-1/3 text-center'>
-          Welcome to Skills & Achievemtns Section  
-          <ThreeScene />
-        </div>
+      <section className="min-h-screen bg-white dark:bg-black grid place-items-center relative overflow-hidden text-clip" id='section1'>
+      <div className='absolute flex items-center justify-center flex-col top-1/2 transform -translate-y-1/3 text-center'>
+  <div className="absolute z-0 text-black dark:text-white text-center pb-52 xl:text-9xl lg:text-7xl md:text-5xl sm:text-xl text-5xl font-extrabold overflow-hidden text-clip">
+  <span>Skills </span>
+<div className="block h-64 m-10"></div>
+<span>Achievements</span>
+  </div>
+  <div className="relative z-10">
+    <ThreeScene />
+  </div>
+</div>
         <div className="absolute right-20 top-1/3 transform -translate-y-1/2 w-2 h-32 hidden md:block">
           <Scrollbar />
         </div>
