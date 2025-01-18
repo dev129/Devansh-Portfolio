@@ -1,43 +1,66 @@
 'use client'
 import React from 'react';
-import { GiProcessor } from "react-icons/gi";
-import { MdComputer } from "react-icons/md";
+import { SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiReact, SiDocker, SiGit, SiGithub, SiPostman } from 'react-icons/si';
 import Marquee from "react-fast-marquee";
-import SkillCard from './SkillCard';
+import { IconType } from 'react-icons';
 
 interface Skill {
   name: string;
   level: number;
+  icon: IconType;
+  color: string;
 }
 
 const SkillsSection: React.FC = () => {
   const techSkills: Skill[] = [
-    { name: "Full Stack Development", level: 90 },
-    { name: "Cloud Architecture", level: 85 },
-    { name: "DevOps", level: 80 },
-    { name: "AI/ML", level: 75 }
+    { name: "Next.js", level: 90, icon: SiNextdotjs, color: "text-white" },
+    { name: "Tailwind CSS", level: 85, icon: SiTailwindcss, color: "text-cyan-400" },
+    { name: "HTML5", level: 95, icon: SiHtml5, color: "text-orange-500" },
+    { name: "CSS3", level: 90, icon: SiCss3, color: "text-blue-500" },
+    { name: "JavaScript", level: 88, icon: SiJavascript, color: "text-yellow-400" },
+    { name: "React", level: 92, icon: SiReact, color: "text-cyan-400" },
+    { name: "Docker", level: 80, icon: SiDocker, color: "text-blue-400" },
+    { name: "Git", level: 85, icon: SiGit, color: "text-red-500" },
+    { name: "GitHub", level: 88, icon: SiGithub, color: "text-gray-200" },
   ];
 
   return (
     <section className="min-h-screen bg-gradient-to-b from-black to-purple-900 flex flex-col items-center justify-center p-8" id="section2">
-      <div className="mb-10 text-center flex items-center justify-center text-4xl font-bold text-white">
-        <GiProcessor className="mr-2" /> Technical Skills <MdComputer className="ml-2" />
-      </div>
-      
-      <div className="flex flex-wrap justify-center gap-8 mb-12">
-        <SkillCard title="Technical Expertise" skills={techSkills} />
-      </div>
+      <div className="max-w-6xl w-full">
+        <h2 className="text-4xl font-bold text-white text-center mb-12">
+          Technical Skills
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {techSkills.map((skill, index) => (
+            <div 
+              key={index}
+              className="bg-white/10 p-6 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <skill.icon className={`text-3xl ${skill.color}`} />
+                <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-2.5">
+                <div 
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-2.5 rounded-full"
+                  style={{ width: `${skill.level}%` }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
 
-      <Marquee gradient={false} speed={50} autoFill className="bg-white/5 py-8">
-        {Array(5).fill(0).map((_, i) => (
-          <img 
-            key={i}
-            src="https://picsum.photos/200/200"
-            alt={`Certification ${i + 1}`}
-            className="mx-4 rounded-lg h-32 object-cover"
-          />
-        ))}
-      </Marquee>
+        <div className="mt-12">
+          <Marquee gradient={false} speed={50} className="bg-white/5 py-8 rounded-xl" autoFill>
+            {techSkills.map((skill, index) => (
+              <div key={index} className="mx-8">
+                <skill.icon className={`text-4xl ${skill.color}`} />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </div>
     </section>
   );
 };

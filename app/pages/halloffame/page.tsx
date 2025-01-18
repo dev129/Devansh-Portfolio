@@ -23,9 +23,9 @@ const Page: React.FC = () => {
 
   const education = [
     {
-      degree: "Master's in Computer Science",
-      year: "2020-2022",
-      details: "Specialized in AI and Machine Learning"
+      degree: "Bachelors's in Artificial Intelligence",
+      year: "2021-2025",
+      details: "Specialized in AI and Dat Science"
     },
     {
       degree: "Bachelor's in Software Engineering",
