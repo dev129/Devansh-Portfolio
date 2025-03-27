@@ -1,9 +1,9 @@
 'use client'
+import React from 'react';
 import { GiLaurelsTrophy } from "react-icons/gi"; 
 import { AiOutlineHome } from "react-icons/ai"; 
-import React from 'react';
 import { GrPersonalComputer } from "react-icons/gr";
-import { FaGraduationCap, FaHandshake } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa";
 
 const Scrollbar: React.FC = () => {
   const scrollToView = (sectionId: string) => {
@@ -20,7 +20,7 @@ const Scrollbar: React.FC = () => {
           <label
             htmlFor="dashboard"
             className="has-[:checked]:shadow-lg relative w-full h-16 p-4 ease-in-out duration-300 border-solid border-black/10 has-[:checked]:border group flex flex-row gap-3 items-center justify-center text-black rounded-xl"
-            onClick={() => scrollToView('section1')}
+            onClick={() => window.location.href = '/'}
           >
             <input className="hidden peer/expand" type="radio" name="path" id="dashboard" />
             <AiOutlineHome size={200} className="peer-hover/expand:scale-125 peer-hover/expand:text-blue-400 peer-hover/expand:fill-blue-400  peer-checked/expand:fill-blue-400 text-2xl peer-checked/expand:scale-125 ease-in-out duration-300 dark:text-white " />
@@ -46,16 +46,7 @@ const Scrollbar: React.FC = () => {
             />
             
           </label>
-          <label
-            htmlFor="help"
-            className="has-[:checked]:shadow-lg relative w-full h-16 p-4 ease-in-out duration-300 border-solid border-black/10 has-[:checked]:border group flex flex-row gap-3 items-center justify-center text-black rounded-xl"
-            onClick={() => scrollToView('section4')}
-          >
-            <input className="hidden peer/expand" type="radio" name="path" id="help" />
-            <FaGraduationCap
-              className="peer-hover/expand:scale-125 peer-hover/expand:text-blue-400 peer-hover/expand:fill-blue-400  peer-checked/expand:fill-blue-400 text-2xl peer-checked/expand:scale-125 ease-in-out duration-300 dark:text-white"
-              />
-          </label>
+          
           <label
             htmlFor="settings"
             className="has-[:checked]:shadow-lg relative w-full h-16 p-4 ease-in-out duration-300 border-solid border-black/10 has-[:checked]:border group flex flex-row gap-3 items-center justify-center text-black rounded-xl"

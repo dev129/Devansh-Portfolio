@@ -1,25 +1,18 @@
 'use client'
 import React from 'react';
-import { GiPublicSpeaker, GiBookshelf } from "react-icons/gi";
+import { GiPublicSpeaker } from "react-icons/gi";
 import { MdMilitaryTech } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
 import ThreeScene from '@/components/ThreeScene';
 import Scrollbar from '@/components/scrollbar';
-import Footer from '@/components/footer';
 import SkillCard from '@/components/SkillCard';
 import AchievementCard from '@/components/AchievementCard';
-import EducationCard from '@/components/EducationCard';
 import SkillsSection from '@/components/SkillsSection';
 
 const Page: React.FC = () => {
   const [selectedEdu, setSelectedEdu] = React.useState<number | null>(null);
 
-  const softSkills = [
-    { name: "Leadership", level: 95 },
-    { name: "Communication", level: 90 },
-    { name: "Problem Solving", level: 85 },
-    { name: "Team Management", level: 88 }
-  ];
+  
 
   const education = [
     {
@@ -36,14 +29,14 @@ const Page: React.FC = () => {
 
   const achievements = [
     {
-      title: "Industry Leader",
-      description: "Recognized as top 30 under 30 in Technology",
+      title: "Software Club Head",
+      description: "Organised 3 hackathons as the head of the club",
       icon: "🏆"
     },
     {
-      title: "Innovation Award",
-      description: "Patent holder for breakthrough AI algorithm",
-      icon: "💡"
+      title: "GSSOC-ext 2024 ",
+      description: "Held 48th rank in girlscript summer of code extended 2024",
+      icon: "🚀"
     },
     {
       title: "Community Impact",
@@ -77,25 +70,11 @@ const Page: React.FC = () => {
           <GiPublicSpeaker className="mr-2" /> Non-Technical Skills <FaPeopleGroup className="ml-2" />
         </div>
         <div className="flex flex-wrap justify-center gap-8">
-          <SkillCard title="Soft Skills" skills={softSkills} />
+          <SkillCard  />
         </div>
       </section>
 
-      <section className="min-h-screen bg-gradient-to-b from-indigo-900 to-blue-900 flex flex-col items-center justify-center p-8" id="section4">
-        <div className="mb-10 text-center flex items-center text-4xl font-bold text-white">
-          <GiBookshelf className="mr-2" /> Education
-        </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          {education.map((edu, index) => (
-            <EducationCard
-              key={index}
-              education={edu}
-              isSelected={selectedEdu === index}
-              onClick={() => setSelectedEdu(selectedEdu === index ? null : index)}
-            />
-          ))}
-        </div>
-      </section>
+      
 
       <section className="min-h-screen bg-gradient-to-b from-blue-900 to-cyan-900 flex flex-col items-center justify-center p-8" id="section5">
         <div className="mb-10 text-center flex items-center text-4xl font-bold text-white">
@@ -110,8 +89,6 @@ const Page: React.FC = () => {
           ))}
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

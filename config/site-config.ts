@@ -42,17 +42,6 @@ const GridItems: GridItemInterface[] = [
         buttonLink: "https://www.linkedin.com/in/devansh-vishwa-1baa34212/",
         buttonSecondaryText: "150+",
     },
-    //   {
-    //     layout: "1x2",
-    //     type: "social",
-    //     title: "Discord",
-    //     icon: "discord",
-    //     username: "@makrdev",
-    //     buttonTitle: "Join",
-    //     buttonLink: "https://discord.com/invite/5aXRp49Q4h",
-    //     buttonSecondaryText: "44",
-    //     color: "#5865F2",
-    //   },
     {
         layout: "2x2",
         type: "social",
@@ -60,25 +49,23 @@ const GridItems: GridItemInterface[] = [
         icon: "github",
         username: "@dev129",
         buttonTitle: "Follow Me!",
-        buttonSecondaryText: "48+ PRs",
+        buttonSecondaryText: "60+ Repo.",
         buttonLink: "https://github.com/dev129",
         color: "#070707",
         description:
-            "Click to view my open-source projects!",
+        "Click to view my open-source projects!",
     },
-    {
+      {
         layout: "1x2",
         type: "social",
-        title: "Instagram",
-        icon: "instagram",
-        username: "@devanshvishwa",
-        buttonTitle: "Follow",
-        buttonLink: "https://www.instagram.com/devanshvishwa/",
-        // buttonSecondaryText: "1",        
-        color: "#bc2a8d",
-        description:
-            "Chill Developer !",
-    },
+        title: "Discord",
+        icon: "discord",
+        username: "devansh#1133",
+        buttonTitle: "Let's Connect",
+        buttonLink: "https://discordapp.com/users/devansh#1133",
+        color: "#5865F2",
+      },
+    
     {
         layout: "1x2",
         type: "social",
@@ -136,7 +123,7 @@ export const siteConfig = {
     creator: "Devansh Vishwa",
     title: "Frontend developer",
     bio: "Head , Debuggers Club ||Frontend Developer || 2x Hackathon Organiser || 48th rank in GSSoC-ext (2024) || NextJS || Open Source Contributor",
-    location: "Udaipur, Rajasthan",
+    location: "Udaipur, Raj.",
     locationLink:
         "https://www.google.com/maps/place/Udaipur,+Rajasthan/@24.6084198,73.6224703,12z/data=!3m1!4b1!4m6!3m5!1s0x3967e56550a14411:0xdbd8c28455b868b0!8m2!3d24.585445!4d73.712479!16zL20vMGJfa2Z5?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
     email: "devanshvishwa2004@gmail.com",
