@@ -90,7 +90,7 @@ const SkillCard = () => {
                     duration: 1,
                     type: 'spring'
                   }}
-                  className='absolute h-full rounded-full bg-gradient-to-r from-blue-400 to-purple-500'
+                  className="absolute h-full rounded-full bg-gradient-to-r from-blue-400 to-purple-500"
                 />
               </div>
             </motion.div>
