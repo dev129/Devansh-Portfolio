@@ -2,6 +2,7 @@ import Footer from "@/components/footer";
 import LeftPanel from "@/components/left-panel";
 import RightPanel from "@/components/right-panel";
 
+
 export default function Home() {
   return (
     <main className="relative flex flex-col items-center flex-1 w-full h-full">

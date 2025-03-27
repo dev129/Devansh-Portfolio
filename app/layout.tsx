@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Analytics } from "@vercel/analytics/react"
 
 
 import { ThemeProvider } from "@/components/theme-provider";
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} h-full min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100`}>
         
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col h-full min-h-screen">{children}</div>
+          <div className="flex flex-col h-full min-h-screen">{children}<Analytics/></div>
         </ThemeProvider>
         
         </body>
