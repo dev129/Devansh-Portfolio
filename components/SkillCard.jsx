@@ -1,6 +1,6 @@
-'use client'
-import React from 'react';
-import { motion } from 'framer-motion';
+"use client"
+import React from "react";
+import { motion } from "framer-motion";
 
 const SkillCard = () => {
   const skillsData = [
@@ -14,12 +14,12 @@ const SkillCard = () => {
 
   // Color variants for different skills
   const colorVariants = [
-    'from-blue-400 to-purple-500',
-    'from-blue-400 to-purple-500',
-    'from-blue-400 to-purple-500',
-    'from-blue-400 to-purple-500',
-    'from-blue-400 to-purple-500',
-    'from-blue-400 to-purple-500',
+    "from-blue-400 to-purple-500",
+    "from-blue-400 to-purple-500",
+    "from-blue-400 to-purple-500",
+    "from-blue-400 to-purple-500",
+    "from-blue-400 to-purple-500",
+    "from-blue-400 to-purple-500",
   ];
 
   return (
@@ -43,7 +43,7 @@ const SkillCard = () => {
               height: Math.random() * 200 + 100,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              filter: 'blur(40px)'
+              filter: "blur(40px)"
             }}
           />
         ))}
@@ -72,7 +72,7 @@ const SkillCard = () => {
               <div className="flex items-center gap-3 mb-2">
                 <motion.span 
                   animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 3, repeatType: 'reverse' }}
+                  transition={{ repeat: Infinity, duration: 3, repeatType: "reverse" }}
                   className="text-2xl"
                 >
                   {skill.emoji}
@@ -88,7 +88,7 @@ const SkillCard = () => {
                   transition={{ 
                     delay: index * 0.1 + 0.5,
                     duration: 1,
-                    type: 'spring'
+                    type: "spring"
                   }}
                   className="absolute h-full rounded-full bg-gradient-to-r from-blue-400 to-purple-500"
                 />
