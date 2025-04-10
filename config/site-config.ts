@@ -73,7 +73,7 @@ const GridItems: GridItemInterface[] = [
         username: "",
         icon: "resume",
         buttonTitle: "Download",
-        buttonLink: "https://utfs.io/f/f3db2131-47fe-47f2-a80b-6fa0bbea97a9-8a3mok.pdf",
+        buttonLink: "https://drive.google.com/file/d/1GBub-o8NVNoUcxgU6HYmv2N2cQgSSw0m/view?usp=sharing",
         buttonSecondaryText: "",
         color: "#070707",
         description:
